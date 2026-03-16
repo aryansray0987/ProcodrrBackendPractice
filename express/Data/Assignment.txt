@@ -1,0 +1,5 @@
+1. CLI Appplication
+make a cli application where just write the prompt in the cli terminal and it start executing it like making a website cloning website
+
+... making a folder / file using cli 
+
