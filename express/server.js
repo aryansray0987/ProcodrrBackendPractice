@@ -19,7 +19,11 @@ app.get('/user/:id/comment/:cid', (req, res) => {
         message:`${req.params.id} + ${req.params.cid}`
     })
 })
-
+app.get('/\d/', (req, res) => { // we can also set the regular expression in the route url
+    res.json({
+        message:'regular expression'
+    })
+})
 
 const port = process.env.PORT || 2000
 app.listen(port, () => {
