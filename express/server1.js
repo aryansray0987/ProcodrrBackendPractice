@@ -10,7 +10,9 @@ const app = express();
 //         next()
 //     })
 // })
-app.use(express.json())
+app.use(express.json({
+  limit:'16kb'
+}))
 
 app.use('/admin', (req, res, next) => {
     if (req.body.password === 'SECRET') {
