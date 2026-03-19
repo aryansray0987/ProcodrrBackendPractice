@@ -7,8 +7,17 @@ import express from 'express'
 app.use(express.text()); // when ecntype = plain/text
 app.use(express.urlencoded({extended:true})) // when enctype = urlencoded
 
-app.get('/{:id}', async(req, res) => { // express v5 (single level nested route)
-    res.send('hello my name is aryan gupta') 
+app.get('/{:id}', async (req, res) => { // express v5 (single level nested route)
+   
+    const id = req.params.id;
+    res.json({
+        message:id
+    })
+})
+app.get('/user/:id/comment/:cid', (req, res) => {
+    res.json({
+        message:`${req.params.id} + ${req.params.cid}`
+    })
 })
 
 
